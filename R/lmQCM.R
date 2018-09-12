@@ -21,12 +21,11 @@
 #' @import genefilter
 #' @import Biobase
 #' @import nnet
-#' @import cor
 #' @import stats
 #' @export
 
 lmQCM <- function(data_in,gamma=0.55,t=1,lambda=1,beta=0.4,minClusterSize=10,CCmethod="pearson", normalization = F) {
-  print("Calculating massive correlation coefficient ...")
+  message("Calculating massive correlation coefficient ...")
   cMatrix <- cor(t(data_in), method = CCmethod)
   diag(cMatrix) <- 0
 
@@ -42,6 +41,6 @@ lmQCM <- function(data_in,gamma=0.55,t=1,lambda=1,beta=0.4,minClusterSize=10,CCm
 
   C <- localMaximumQCM(cMatrix, gamma, t, lambda)
   mergedCluster <- merging_lmQCM(C, beta, minClusterSize)
-  print("Done.")
+  message("Done.")
   return(mergedCluster)
 }

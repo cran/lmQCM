@@ -1,8 +1,8 @@
 Package: lmQCM
 Type: Package
 Title: An Algorithm for Gene Co-Expression Analysis
-Version: 0.1.1
-Date: 2018-03-15
+Version: 0.1.2
+Date: 2018-09-12
 Authors@R: c(person("Zhi", "Huang", email = "huang898@purdue.edu", role = c("aut", "cre")),
              person("Jie", "Zhang", email = "jizhan@iu.edu", role = c("aut", "ctb")),
              person("Kun", "Huang", email = "kunhuang@iu.edu", role = c("aut", "ctb")),
@@ -19,10 +19,10 @@ Encoding: UTF-8
 Depends: genefilter, Biobase, nnet, stats
 Suggests: devtools, roxygen2
 LazyData: true
-RoxygenNote: 6.0.1
+RoxygenNote: 6.1.0
 URL: http://github.com/huangzhii/lmQCM
 BugReports: http://github.com/huangzhii/lmQCM/issues
 NeedsCompilation: no
-Packaged: 2018-06-23 18:51:01 UTC; zhi
+Packaged: 2018-09-12 18:07:00 UTC; zhi
 Repository: CRAN
-Date/Publication: 2018-06-28 05:41:00 UTC
+Date/Publication: 2018-09-12 18:30:03 UTC
