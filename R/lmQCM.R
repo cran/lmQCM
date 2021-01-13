@@ -60,7 +60,7 @@ lmQCM <- function(data_in,gamma=0.55,t=1,lambda=1,beta=0.4,minClusterSize=10,CCm
     stddev <- rowSds(as.matrix(X), na.rm=TRUE) # standard deviation with 1/(n-1)
     XNorm <- sweep(X,1,mu) # normalize X
     XNorm <- apply(XNorm, 2, function(x) x/stddev)
-    SVD <- svd(XNorm, LINPACK = FALSE)
+    SVD <- svd(XNorm)
     eigengene.matrix[i,] <- t(SVD$v[,1])
   }
   eigengene.matrix = data.frame(eigengene.matrix)
