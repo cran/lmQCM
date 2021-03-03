@@ -30,10 +30,9 @@ lmQCM <- function(data_in,gamma=0.55,t=1,lambda=1,beta=0.4,minClusterSize=10,CCm
   message("Calculating massive correlation coefficient ...")
   cMatrix <- cor(t(data_in), method = CCmethod)
   diag(cMatrix) <- 0
-
+  cMatrix <- abs(cMatrix)
   if(normalization){
     # Normalization
-    cMatrix <- abs(cMatrix)
     D <- rowSums(cMatrix)
     D.half <- 1/sqrt(D)
 
